@@ -10,15 +10,13 @@ function draw(){
     rect(68, 19, 37, 55);
     rect(500, 19, 37, 55);
     if (keyIsDown(LEFT_ARROW)){
-        x-=8;
-        while (x>1){
-        x+=10;
-    }
+        if (x>0) {
+            x-=8;
+        }
     }
     if (keyIsDown(RIGHT_ARROW)){
-        x +=8;
-     while (x<1000){
-        x-=10;
+     if (x<600-37){
+        x+=8;
     }
     }
 }
